@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Earn Money</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+margin:0;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#22c55e;
+}
+
+.card{
+background:#1e293b;
+margin:20px;
+padding:20px;
+border-radius:15px;
+}
+
+input{
+padding:10px;
+width:200px;
+}
+
+button{
+padding:10px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.result{
+margin-top:15px;
+font-size:24px;
+color:#22c55e;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+💰 Earn Money
+</header>
+
+<div class="card">
+<h2>Income Calculator</h2>
+
+<input type="number" id="clients" placeholder="Clients">
+
+<input type="number" id="price" placeholder="Price per Client">
+
+<br><br>
+
+<button onclick="calc()">
+Calculate
+</button>
+
+<div class="result" id="result">
+₹0
+</div>
+
+</div>
+
+<script>
+function calc(){
+
+let clients =
+document.getElementById("clients").value;
+
+let price =
+document.getElementById("price").value;
+
+let total = clients * price;
+
+document.getElementById("result").innerHTML =
+"₹" + total;
+
+}
+</script>
+<div style="
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111827;
+padding:15px;
+text-align:center;
+">
+
+<a href="index.html" style="color:white;margin:15px;text-decoration:none;">🏠 Home</a>
+
+<a href="earn.html" style="color:white;margin:15px;text-decoration:none;">💰 Earn</a>
+
+<a href="profile.html" style="color:white;margin:15px;text-decoration:none;">👤 Profile</a>
+
+</div>
+</body>
+</html>
